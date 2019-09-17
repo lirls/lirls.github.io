@@ -10,7 +10,7 @@
   
   
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/png">
   <meta name="description" content="纽约时间比加州时间早三个小时">
 <meta name="keywords" content="优美小诗">
 <meta property="og:type" content="article">
@@ -30,7 +30,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1568707056203">
+  <link rel="stylesheet" href="/css/style.css?v=1568714652803">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -259,19 +259,19 @@
 
   
   <section class="nexmoe-comment">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '80b2453b6d5f37ad6225',
-        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
-        id: window.location.pathname,
-        repo: 'nexmoe.github.io',
-        owner: 'nexmoe',
-        admin: 'nexmoe'
-    })
-    gitalk.render('gitalk')
+    <div id="gitment"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'lirls', // 你的 GitHub ID
+    repo: 'https://github.com/lirls/discussrepo.git', // 存储评论的 repo
+    oauth: {
+        client_id: '5f6210919f14050207b1', // 你的 client ID
+        client_secret: 'ec47e5d118bcb7713c7dfda7b41bc77986f8968d' // 你的 client secret
+    },
+})
+gitment.render('gitment')
 </script>
 </section>
 </div>
@@ -290,7 +290,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1568707056225"></script>
+<script src="/js/app.js?v=1568714652813"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
