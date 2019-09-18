@@ -20,7 +20,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/06/25/ZZE461.gif">
 <meta property="og:image" content="https://s2.ax1x.com/2019/06/25/ZZEbkD.png">
-<meta property="og:updated_time" content="2019-09-17T07:04:16.906Z">
+<meta property="og:updated_time" content="2019-09-18T01:47:38.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3实现无缝图片滚动">
 <meta name="twitter:description" content="使用css3中animation动画实现图片无缝滚动。">
@@ -33,7 +33,7 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/style.css?v=1568770775954">
+  <link rel="stylesheet" href="/css/style.css?v=1568771357891">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -57,9 +57,9 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>2</div>
-        <div><span>标签</span>2</div>
-        <div><span>分类</span>2</div>
+        <div><span>文章</span>3</div>
+        <div><span>标签</span>3</div>
+        <div><span>分类</span>3</div>
     </div>
     <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -135,6 +135,13 @@
         </li>
 
         
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/随心所阅/">随心所阅</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
       </ul>
 
     </div>
@@ -146,7 +153,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">标签云</h3>
     <div id="randomtagcloud" class="nexmoe-widget tagcloud">
-      <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/studymethod/" style="font-size: 10px;">学习方法</a>
+      <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/verselet/" style="font-size: 10px;">优美小诗</a> <a href="/tags/studymethod/" style="font-size: 10px;">学习方法</a>
     </div>
     
   </div>
@@ -181,7 +188,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月16日</a>
-    <a><i class="nexmoefont icon-areachart"></i>427 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>423 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/frontend/">Web前端</a>
@@ -192,11 +199,11 @@
   </div>
   <article>
     <h3 id="使用css3中animation动画实现图片无缝滚动。"><a href="#使用css3中animation动画实现图片无缝滚动。" class="headerlink" title="使用css3中animation动画实现图片无缝滚动。"></a>使用css3中animation动画实现图片无缝滚动。</h3><a id="more"></a>
-<h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><p><img src="https://s2.ax1x.com/2019/06/25/ZZE461.gif" alt="效果图"></p>
+<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="https://s2.ax1x.com/2019/06/25/ZZE461.gif" alt="效果图"></p>
 <p>​    其中首先所有图片的宽相加要等于盒子的宽，然后使用@keyframes  animation（动画名字），在from（开始位置ps:也可以用0%）和to（结束位置ps:也可以用100%）添加transform：translateX添加动画的开始和结束X轴坐标。用animation 动画片引用动画。infinite无线循环  linear匀速。更多css元素请参考<a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">W3C官方手册</a>。</p>
-<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>​            因为图片是和盒子一样宽，所以只要图片一移动后面肯定会漏出空白位置。即使动画快速回来还是会有这样的情况。所以我只需要在盒子后面在加上一组图片，这样最后一张走完了，下一排的第一张图片就会显示了；这样依次形成一个循环，超出的盒子部分的隐藏，搞定。如果理解不清楚，那么画一张图理解一下（大概是这样的QWQ）。</p>
+<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>​            因为图片是和盒子一样宽，所以只要图片一移动后面肯定会漏出空白位置。即使动画快速回来还是会有这样的情况。所以我只需要在盒子后面在加上一组图片，这样最后一张走完了，下一排的第一张图片就会显示了；这样依次形成一个循环，超出的盒子部分的隐藏，搞定。如果理解不清楚，那么画一张图理解一下（大概是这样的QWQ）。</p>
 <p><img src="https://s2.ax1x.com/2019/06/25/ZZEbkD.png" alt="自画图"></p>
-<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><h3 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构:"></a>HTML结构:</h3><pre><code>&lt;nav&gt;
+<h2 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构:"></a>HTML结构:</h2><pre><code>&lt;nav&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
         &lt;li&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
@@ -214,7 +221,7 @@
         &lt;li&gt;&lt;img src=&quot;7.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;nav&gt;
-</code></pre><h3 id="CSS结构"><a href="#CSS结构" class="headerlink" title="CSS结构:"></a>CSS结构:</h3><pre><code>*{
+</code></pre><h2 id="CSS结构"><a href="#CSS结构" class="headerlink" title="CSS结构:"></a>CSS结构:</h2><pre><code>*{
       margin:0;
       padding: 0;
      }
@@ -300,7 +307,7 @@ gitment.render('gitment')
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1568770775974"></script>
+<script src="/js/app.js?v=1568771357907"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
