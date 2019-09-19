@@ -5,11 +5,32 @@
 }
 a {
   text-decoration: none;
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur"), auto;
+}
+a:active {
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/work.cur"), alias;
+}
+a:hover {
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/work.cur"), alias;
+}
+p {
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur"), auto;
+}
+img {
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur"), auto;
 }
 body {
   max-width: 1200px;
   margin: auto !important;
   cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur"), auto;
+}
+#veditor {
+  background-image: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgba(255,255,255,0);
+  resize: vertical;
 }
 #nexmoe-background .nexmoe-bg {
   opacity: 0.2;
@@ -100,6 +121,7 @@ body {
 }
 #nexmoe-header .nexmoe-list {
   padding: 8px 20px;
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur"), auto;
   nexmoe-list: mdui-list;
 }
 #nexmoe-header .nexmoe-list .nexmoe-list-item {
@@ -278,6 +300,7 @@ body {
 }
 #nexmoe-content .nexmoe-posts {
   position: relative;
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur"), auto;
 }
 #nexmoe-content .nexmoe-posts .nexmoe-post {
   width: 100%;
@@ -482,6 +505,7 @@ article code {
   font-size: 85%;
   padding: 0.2em 0.4em;
   border: 1px solid #d7dae2;
+  cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur"), auto;
 }
 article code::-webkit-scrollbar {
   width: 10px;
