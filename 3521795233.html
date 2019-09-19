@@ -21,13 +21,13 @@
 <meta property="og:site_name" content="心中念，事中现-Lirls">
 <meta property="og:description" content="使用css3中animation动画实现图片无缝滚动。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://s2.ax1x.com/2019/06/25/ZZE461.gif">
-<meta property="og:image" content="https://s2.ax1x.com/2019/06/25/ZZEbkD.png">
+<meta property="og:image" content="https://www.lirls.com/img/loading.gif">
+<meta property="og:image" content="https://www.lirls.com/img/loading.gif">
 <meta property="og:updated_time" content="2019-09-18T01:47:38.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3实现无缝图片滚动">
 <meta name="twitter:description" content="使用css3中animation动画实现图片无缝滚动。">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/25/ZZE461.gif">
+<meta name="twitter:image" content="https://www.lirls.com/img/loading.gif">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -36,7 +36,7 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/style.css?v=1568922075550">
+  <link rel="stylesheet" href="/css/style.css?v=1568923857925">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -48,7 +48,7 @@
         <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
         <div class="mdui-toolbar-spacer"></div>
         <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="Lirls" class="mdui-btn mdui-btn-icon"><img src="https://s2.ax1x.com/2019/09/16/nWqd41.jpg"></a>
+        <a href="/" title="Lirls" class="mdui-btn mdui-btn-icon"><img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/09/16/nWqd41.jpg"></a>
        </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="Lirls">
-            <img src="https://s2.ax1x.com/2019/09/16/nWqd41.jpg" alt="Lirls">
+            <img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/09/16/nWqd41.jpg" alt="Lirls">
         </a>
     </div>
     <div class="nexmoe-count">
@@ -183,7 +183,7 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-        <img src="https://s2.ax1x.com/2019/09/16/nf9gQs.jpg">
+        <img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/09/16/nf9gQs.jpg">
         
         <h1>CSS3实现无缝图片滚动</h1>
     </div>
@@ -200,10 +200,10 @@
   </div>
   <article>
     <h3 id="使用css3中animation动画实现图片无缝滚动。"><a href="#使用css3中animation动画实现图片无缝滚动。" class="headerlink" title="使用css3中animation动画实现图片无缝滚动。"></a>使用css3中animation动画实现图片无缝滚动。</h3><a id="more"></a>
-<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="https://s2.ax1x.com/2019/06/25/ZZE461.gif" alt="效果图"></p>
+<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/06/25/ZZE461.gif" alt="效果图"></p>
 <p>​    其中首先所有图片的宽相加要等于盒子的宽，然后使用@keyframes  animation（动画名字），在from（开始位置ps:也可以用0%）和to（结束位置ps:也可以用100%）添加transform：translateX添加动画的开始和结束X轴坐标。用animation 动画片引用动画。infinite无线循环  linear匀速。更多css元素请参考<a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">W3C官方手册</a>。</p>
 <h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>​            因为图片是和盒子一样宽，所以只要图片一移动后面肯定会漏出空白位置。即使动画快速回来还是会有这样的情况。所以我只需要在盒子后面在加上一组图片，这样最后一张走完了，下一排的第一张图片就会显示了；这样依次形成一个循环，超出的盒子部分的隐藏，搞定。如果理解不清楚，那么画一张图理解一下（大概是这样的QWQ）。</p>
-<p><img src="https://s2.ax1x.com/2019/06/25/ZZEbkD.png" alt="自画图"></p>
+<p><img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/06/25/ZZEbkD.png" alt="自画图"></p>
 <h2 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构:"></a>HTML结构:</h2><pre><code>&lt;nav&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
@@ -306,7 +306,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1568922075570"></script>
+<script src="/js/app.js?v=1568923857987"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -333,7 +333,7 @@
     });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nepmaid.model.json"},"display":{"position":"right","width":300,"height":400},"mobile":{"show":true},"react":{"opacity":0.5},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nepmaid.model.json"},"display":{"position":"right","width":300,"height":400},"mobile":{"show":true},"react":{"opacity":0.5},"log":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
   <!--看板娘-->
   <script src="/live2d-widget/autoload.js"></script>
 </html>
