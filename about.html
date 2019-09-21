@@ -34,7 +34,7 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/style.css?v=1569043912435">
+  <link rel="stylesheet" href="/css/style.css?v=1569061657849">
 <link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
@@ -113,6 +113,28 @@
         </a>
     </div>
 </div>
+<!-- 
+<div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">API-IP</h3>
+
+    <h3 class="nexmoe-widget-title">
+        <script type="application/javascript">
+            function getgeoip(json) {
+                document.write("IP地址信息: ", json.ip, "<br /><br />");
+                document.write("国家: ", json.country, "<br /><br />");
+                document.write("国家/地区代码: ", json.country_code, "<br /><br />");
+                document.write("状态/地区代码: ", json.region_code, "<br /><br />");
+                document.write("大洲代码: ", json.continent_code, "<br /><br />");
+                document.write("维度: ", json.latitude, "<br /><br />");
+                document.write("经度: ", json.longitude, "<br /><br />");
+                document.write("组织(ASN+ISP名称): ", json.asn, "<br /><br />");
+                document.write("时区: ", json.timezone, "<br /><br />");
+            }
+        </script>
+
+        <script type="application/javascript" src="https://api.ip.sb/geoip?callback=getgeoip"></script>
+    </h3>
+</div> -->
   
   
   <div class="nexmoe-widget-wrap">
@@ -167,7 +189,7 @@
   
   
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">日期</h3>
+    <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li></ul>
     </div>
@@ -204,7 +226,7 @@
 <!---move--->
 <p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script></p>
 
-    <div id="aplayer-YJwIdBQz" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1372796676" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-QNqFQyHY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1372796676" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
 <h2 id="博客相关"><a href="#博客相关" class="headerlink" title="博客相关"></a>博客相关</h2><p>创立于：2019年6月18日</p>
 <blockquote>
 <p>​    “凡事到了回忆的时候<br>​    真实得像假的一样”</p>
@@ -213,7 +235,7 @@
 <p>  <strong>凡走过必留下痕迹，学点什么都会有用的。——博客最多是记录学习丶读物丶爱好丶分享。</strong></p>
 <h2 id="网易云音乐歌单"><a href="#网易云音乐歌单" class="headerlink" title="网易云音乐歌单"></a>网易云音乐歌单</h2><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script></p>
 
-    <div id="aplayer-snUhdpRX" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="86542823" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-xlaDzvxb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="86542823" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
   </article>
   
     
@@ -230,7 +252,37 @@
   
   <section class="nexmoe-comment">
     <div class="valine"></div>
-<script src="https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js"></script>
+  
+<style>
+.v .vwrap {
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+.v .vwrap .vheader .vinput {
+    border: 1px solid gray;
+}
+.v .vlist .vcard {
+    border: 3px solid skyblue;
+    padding-top: 1.5em;
+    position: relative;
+    display: block;
+    }
+#veditor {
+    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255,255,255,0);
+    resize: vertical;
+    }
+
+</style>
+
 <script>
     // 使用方法 https://valine.js.org/quickstart.html
     new Valine({
@@ -261,7 +313,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1569043912492"></script>
+<script src="/js/app.js?v=1569061657883"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

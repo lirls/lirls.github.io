@@ -24,14 +24,6 @@ body {
   margin: auto !important;
   cursor: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur"), auto;
 }
-#veditor {
-  background-image: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: rgba(255,255,255,0);
-  resize: vertical;
-}
 #nexmoe-background .nexmoe-bg {
   opacity: 0.2;
   background-size: cover;
