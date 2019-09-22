@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.lirls.com/about.html</loc>
+    
+    <lastmod>2019-09-22T00:58:53.360Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.lirls.com/py.html</loc>
     
     <lastmod>2019-09-20T08:12:45.459Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://www.lirls.com/3521795233.html</loc>
     
     <lastmod>2019-09-18T01:47:38.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lirls.com/about.html</loc>
-    
-    <lastmod>2019-09-18T00:09:03.631Z</lastmod>
     
   </url>
   
