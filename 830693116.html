@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>歌单 - 心中念，事中现-Lirls</title>
+  <title>MySQL中DISTINCT不能选择多个字段的解决方法 - 心中念，事中现-Lirls</title>
   <meta charset="UTF-8">
   <meta name="description" content="null">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,17 +13,18 @@
     <meta name="baidu-site-verification" content="FIWvtH4jqe">
 
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/png">
-  <meta name="description" content="{% meting &quot;470774529&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="歌单">
-<meta property="og:url" content="https://www.lirls.com/playlist/index.html">
+  <meta name="description" content="MySQL中DISTINCT不能选择多个字段的解决方法">
+<meta name="keywords" content="数据库,MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL中DISTINCT不能选择多个字段的解决方法">
+<meta property="og:url" content="https://www.lirls.com/830693116.html">
 <meta property="og:site_name" content="心中念，事中现-Lirls">
-<meta property="og:description" content="{% meting &quot;470774529&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %}">
+<meta property="og:description" content="MySQL中DISTINCT不能选择多个字段的解决方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-17T13:36:51.817Z">
+<meta property="og:updated_time" content="2019-09-27T06:41:25.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="歌单">
-<meta name="twitter:description" content="{% meting &quot;470774529&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %}">
+<meta name="twitter:title" content="MySQL中DISTINCT不能选择多个字段的解决方法">
+<meta name="twitter:description" content="MySQL中DISTINCT不能选择多个字段的解决方法">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -34,7 +35,10 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/style.css?v=1569566572095">
+  <link rel="stylesheet" href="/css/style.css?v=1569566572142">
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -214,28 +218,48 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-            <img src="/img/loading.gif" data-original="null">
+        <img src="/img/loading.gif" data-original="https://s2.ax1x.com/2019/09/16/nf94oT.jpg">
         
-        <h1>歌单</h1>
+        <h1>MySQL中DISTINCT不能选择多个字段的解决方法</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月17日</a>
-    <a><i class="nexmoefont icon-areachart"></i>14 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月27日</a>
+    <a><i class="nexmoefont icon-areachart"></i>275 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/数据库/">数据库</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/MySQL/">MySQL</a> <a class="nexmoefont icon-tag-fill -link" href="/tags/数据库/">数据库</a>
     
   </div>
   <article>
-    <pre><code class="lang-bash">{% meting "470774529" "netease" "playlist" "theme:#FF4081" "mode:circulation" "mutex:true" "listmaxheight:340px" "preload:auto" %}
-</code></pre>
+    <h3 id="MySQL中DISTINCT不能选择多个字段的解决方法"><a href="#MySQL中DISTINCT不能选择多个字段的解决方法" class="headerlink" title="MySQL中DISTINCT不能选择多个字段的解决方法"></a>MySQL中DISTINCT不能选择多个字段的解决方法</h3><a id="more"></a>
 
+    <div id="aplayer-ZFNDQfNb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="536622304" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+<p>在实际应用中，我们经常要选择数据库某表中重复数据，通常我们是使用DISTINCT函数。</p>
+<p>但DISTINCT只能对一个字段有效，比如：</p>
+<ol>
+<li>sql=”select DISTINCT title from Table where id&gt;0”</li>
+</ol>
+<p>当我们需要列出数据中的另一列，比如：</p>
+<ol>
+<li>sql=”select DISTINCT title,posttime from Table where id&gt;0”  </li>
+</ol>
+<p>得出的结果就不是我们想要的了，所以我们需要用另外的方法来解决这个问题。</p>
+<p>下面的是我写的SQL语句，我不知道是不是很好，但愿有更好的人拿出来分享一下：</p>
+<h3 id="写法一："><a href="#写法一：" class="headerlink" title="写法一："></a><strong>写法一：</strong></h3><pre><code>    sql = &quot;Select DISTINCT(title),posttime From Table1 Where id&gt;0&quot;
+</code></pre><h3 id="写法二："><a href="#写法二：" class="headerlink" title="写法二："></a><strong>写法二：</strong></h3><pre><code>    sql = &quot;Select title,posttime From Table1 Where id&gt;0 group by title,posttime&quot;
+</code></pre><h3 id="写法三："><a href="#写法三：" class="headerlink" title="写法三："></a><strong>写法三：</strong></h3><pre><code>    sql=&quot;select title,posttime from Table where id in (select min(id) from Table group by title)&quot;
+</code></pre><h3 id="实际自己解决是这样的："><a href="#实际自己解决是这样的：" class="headerlink" title="实际自己解决是这样的："></a>实际自己解决是这样的：</h3><pre><code>    $sqltr = &quot;SELECT xrd_goods.cat_id,xrd_goods.brand_id,xrd_brand.brand_id,xrd_brand.brand_name,count(distinct xrd_brand.brand_name) FROM xrd_goods INNER JOIN xrd_brand ON xrd_goods.brand_id = xrd_brand.brand_id WHERE xrd_brand.brand_id in( SELECT max(xrd_brand.brand_id) FROM xrd_brand xrd_goods WHERE xrd_goods.cat_id=$pid and xrd_brand.brand_id = xrd_goods.brand_id GROUP BY xrd_goods.brand_id ) GROUP BY xrd_brand.brand_name&quot;;
+</code></pre>
   </article>
   
     
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>Lirls<br>
-<strong>本文链接：</strong><a href="https://www.lirls.com/playlist/index.html" title="https://www.lirls.com/playlist/index.html" target="_blank" rel="noopener">https://www.lirls.com/playlist/index.html</a><br>
+<strong>本文链接：</strong><a href="https://www.lirls.com/830693116.html" title="https://www.lirls.com/830693116.html" target="_blank" rel="noopener">https://www.lirls.com/830693116.html</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 CN</a> 协议进行许可
 
@@ -306,7 +330,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1569566572133"></script>
+<script src="/js/app.js?v=1569566572179"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
