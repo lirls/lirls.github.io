@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="心中念，事中现-Lirls">
 <meta property="og:description" content="MySQL中DISTINCT不能选择多个字段的解决方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-27T06:41:25.548Z">
+<meta property="og:updated_time" content="2019-09-27T06:51:48.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL中DISTINCT不能选择多个字段的解决方法">
 <meta name="twitter:description" content="MySQL中DISTINCT不能选择多个字段的解决方法">
@@ -35,7 +35,7 @@
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/style.css?v=1569566572142">
+  <link rel="stylesheet" href="/css/style.css?v=1573033815925">
 <link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
@@ -224,7 +224,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年09月27日</a>
-    <a><i class="nexmoefont icon-areachart"></i>275 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>288 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/数据库/">数据库</a>
@@ -236,23 +236,30 @@
   <article>
     <h3 id="MySQL中DISTINCT不能选择多个字段的解决方法"><a href="#MySQL中DISTINCT不能选择多个字段的解决方法" class="headerlink" title="MySQL中DISTINCT不能选择多个字段的解决方法"></a>MySQL中DISTINCT不能选择多个字段的解决方法</h3><a id="more"></a>
 
-    <div id="aplayer-ZFNDQfNb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="536622304" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-<p>在实际应用中，我们经常要选择数据库某表中重复数据，通常我们是使用DISTINCT函数。</p>
-<p>但DISTINCT只能对一个字段有效，比如：</p>
+    <div id="aplayer-rLioEpHZ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="536622304" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+<p><strong>在实际应用中，我们经常要选择数据库某表中重复数据，通常我们是使用DISTINCT函数。</strong></p>
+<p><strong>但DISTINCT只能对一个字段有效，比如：</strong></p>
 <ol>
-<li>sql=”select DISTINCT title from Table where id&gt;0”</li>
+<li><strong>sql=”select DISTINCT title from Table where id&gt;0”</strong></li>
 </ol>
-<p>当我们需要列出数据中的另一列，比如：</p>
+<p><strong>当我们需要列出数据中的另一列，比如：</strong></p>
 <ol>
-<li>sql=”select DISTINCT title,posttime from Table where id&gt;0”  </li>
+<li><strong>sql=”select DISTINCT title,posttime from Table where id&gt;0”</strong>  </li>
 </ol>
-<p>得出的结果就不是我们想要的了，所以我们需要用另外的方法来解决这个问题。</p>
-<p>下面的是我写的SQL语句，我不知道是不是很好，但愿有更好的人拿出来分享一下：</p>
+<p><strong>得出的结果就不是我们想要的了，所以我们需要用另外的方法来解决这个问题。</strong></p>
+<p><strong>下面的是我写的SQL语句，我不知道是不是很好，但愿有更好的人拿出来分享一下：</strong></p>
 <h3 id="写法一："><a href="#写法一：" class="headerlink" title="写法一："></a><strong>写法一：</strong></h3><pre><code>    sql = &quot;Select DISTINCT(title),posttime From Table1 Where id&gt;0&quot;
 </code></pre><h3 id="写法二："><a href="#写法二：" class="headerlink" title="写法二："></a><strong>写法二：</strong></h3><pre><code>    sql = &quot;Select title,posttime From Table1 Where id&gt;0 group by title,posttime&quot;
 </code></pre><h3 id="写法三："><a href="#写法三：" class="headerlink" title="写法三："></a><strong>写法三：</strong></h3><pre><code>    sql=&quot;select title,posttime from Table where id in (select min(id) from Table group by title)&quot;
-</code></pre><h3 id="实际自己解决是这样的："><a href="#实际自己解决是这样的：" class="headerlink" title="实际自己解决是这样的："></a>实际自己解决是这样的：</h3><pre><code>    $sqltr = &quot;SELECT xrd_goods.cat_id,xrd_goods.brand_id,xrd_brand.brand_id,xrd_brand.brand_name,count(distinct xrd_brand.brand_name) FROM xrd_goods INNER JOIN xrd_brand ON xrd_goods.brand_id = xrd_brand.brand_id WHERE xrd_brand.brand_id in( SELECT max(xrd_brand.brand_id) FROM xrd_brand xrd_goods WHERE xrd_goods.cat_id=$pid and xrd_brand.brand_id = xrd_goods.brand_id GROUP BY xrd_goods.brand_id ) GROUP BY xrd_brand.brand_name&quot;;
-</code></pre>
+</code></pre><h3 id="实际自己解决是这样的："><a href="#实际自己解决是这样的：" class="headerlink" title="实际自己解决是这样的："></a>实际自己解决是这样的：</h3><pre><code>    $sqltr = &quot;SELECT xrd_goods.cat_id,xrd_goods.brand_id,xrd_brand.brand_id,xrd_brand.brand_name,
+    count(distinct xrd_brand.brand_name) 
+    FROM xrd_goods INNER JOIN xrd_brand ON xrd_goods.brand_id = xrd_brand.brand_id 
+    WHERE xrd_brand.brand_id in( SELECT max(xrd_brand.brand_id) 
+    FROM xrd_brand xrd_goods 
+    WHERE xrd_goods.cat_id=$pid and xrd_brand.brand_id = xrd_goods.brand_id 
+    GROUP BY xrd_goods.brand_id ) GROUP BY xrd_brand.brand_name&quot;;
+</code></pre><p><strong>换行好像会稍微好看一点哈(｀・ω・´)</strong></p>
+
   </article>
   
     
@@ -330,7 +337,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1569566572179"></script>
+<script src="/js/app.js?v=1573033815987"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

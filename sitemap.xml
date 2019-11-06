@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.lirls.com/830693116.html</loc>
+    <loc>https://www.lirls.com/about.html</loc>
     
-    <lastmod>2019-09-27T06:41:25.548Z</lastmod>
+    <lastmod>2019-11-06T09:48:27.866Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.lirls.com/about.html</loc>
+    <loc>https://www.lirls.com/playlist/index.html</loc>
     
-    <lastmod>2019-09-22T00:58:53.360Z</lastmod>
+    <lastmod>2019-11-06T09:40:06.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.lirls.com/830693116.html</loc>
+    
+    <lastmod>2019-09-27T06:51:48.820Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://www.lirls.com/3521795233.html</loc>
     
     <lastmod>2019-09-18T01:47:38.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lirls.com/playlist/index.html</loc>
-    
-    <lastmod>2019-09-17T13:36:51.817Z</lastmod>
     
   </url>
   
