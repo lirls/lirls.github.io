@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-03-22T21:15:31.979Z</updated>
+  <updated>2020-03-22T21:01:52.679Z</updated>
   <id>/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MySQL中DISTINCT不能选择多个字段的解决方法</title>
-    <link href="/2020/03/22/MySQL%E4%B8%ADDISTINCT%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>/2020/03/22/MySQL中DISTINCT不能选择多个字段的解决方法/</id>
+    <title>css3实现无缝图片滚动</title>
+    <link href="/2020/03/22/css3%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E5%9B%BE%E7%89%87%E6%BB%9A%E5%8A%A8/"/>
+    <id>/2020/03/22/css3实现无缝图片滚动/</id>
     <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-22T21:15:31.979Z</updated>
+    <updated>2020-03-22T21:01:52.679Z</updated>
     
     <summary type="html">
     
-      MySQL字段问题
+      无缝图片滚动
     
     </summary>
     
@@ -39,15 +39,15 @@
   </entry>
   
   <entry>
-    <title>css3实现无缝图片滚动</title>
-    <link href="/2020/03/22/css3%E5%AE%9E%E7%8E%B0%E6%97%A0%E7%BC%9D%E5%9B%BE%E7%89%87%E6%BB%9A%E5%8A%A8/"/>
-    <id>/2020/03/22/css3实现无缝图片滚动/</id>
+    <title>MySQL中DISTINCT不能选择多个字段的解决方法</title>
+    <link href="/2020/03/22/MySQL%E4%B8%ADDISTINCT%E4%B8%8D%E8%83%BD%E9%80%89%E6%8B%A9%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>/2020/03/22/MySQL中DISTINCT不能选择多个字段的解决方法/</id>
     <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-22T21:01:52.679Z</updated>
+    <updated>2020-03-22T21:15:31.979Z</updated>
     
     <summary type="html">
     
-      无缝图片滚动
+      MySQL字段问题
     
     </summary>
     
