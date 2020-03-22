@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a | lirls-星芒万里,瞬时毫厘</title>
+  <title itemprop="name">MySQL中DISTINCT不能选择多个字段的解决方法 | lirls-星芒万里,瞬时毫厘</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -354,117 +354,144 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg);" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      MySQL中DISTINCT不能选择多个字段的解决方法</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/lirls.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">lirls</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2020/03/22/MySQL中DISTINCT不能选择多个字段的解决方法/">
-                          <span style="color:#0bf;">
-                          22日17:33:15</span>
-                          MySQL中DISTINCT不能选择多个字段的解决方法
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/03/22/css3实现无缝图片滚动/">
-                          <span style="color:#0bf;">
-                          22日17:33:15</span>
-                          css3实现无缝图片滚动
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/03/22/css幽灵空白节点/">
-                          <span style="color:#0bf;">
-                          22日17:33:15</span>
-                          css幽灵空白节点
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/03/22/纽约比加州时间早3个小时/">
-                          <span style="color:#0bf;">
-                          22日17:33:15</span>
-                          纽约比加州时间早3个小时
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/03/22/hello-world/">
-                          <span style="color:#0bf;">
-                          22日11:29:45</span>
-                          hello world
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h3 id="MySQL中DISTINCT不能选择多个字段的解决方法"><a href="#MySQL中DISTINCT不能选择多个字段的解决方法" class="headerlink" title="MySQL中DISTINCT不能选择多个字段的解决方法"></a>MySQL中DISTINCT不能选择多个字段的解决方法</h3><p><strong>在实际应用中，我们经常要选择数据库某表中重复数据，通常我们是使用DISTINCT函数。</strong></p>
+<p><strong>但DISTINCT只能对一个字段有效，比如：</strong></p>
+<ol>
+<li><strong>sql=”select DISTINCT title from Table where id&gt;0”</strong></li>
+</ol>
+<p><strong>当我们需要列出数据中的另一列，比如：</strong></p>
+<ol>
+<li><strong>sql=”select DISTINCT title,posttime from Table where id&gt;0”</strong>  </li>
+</ol>
+<p><strong>得出的结果就不是我们想要的了，所以我们需要用另外的方法来解决这个问题。</strong></p>
+<p><strong>下面的是我写的SQL语句，我不知道是不是很好，但愿有更好的人拿出来分享一下：</strong></p>
+<h3 id="写法一："><a href="#写法一：" class="headerlink" title="写法一："></a><strong>写法一：</strong></h3><pre><code>    sql = &quot;Select DISTINCT(title),posttime From Table1 Where id&gt;0&quot;
+</code></pre><h3 id="写法二："><a href="#写法二：" class="headerlink" title="写法二："></a><strong>写法二：</strong></h3><pre><code>    sql = &quot;Select title,posttime From Table1 Where id&gt;0 group by title,posttime&quot;
+</code></pre><h3 id="写法三："><a href="#写法三：" class="headerlink" title="写法三："></a><strong>写法三：</strong></h3><pre><code>    sql=&quot;select title,posttime from Table where id in (select min(id) from Table group by title)&quot;
+</code></pre><h3 id="实际自己解决是这样的："><a href="#实际自己解决是这样的：" class="headerlink" title="实际自己解决是这样的："></a>实际自己解决是这样的：</h3><pre><code>    $sqltr = &quot;SELECT xrd_goods.cat_id,xrd_goods.brand_id,xrd_brand.brand_id,xrd_brand.brand_name,
+    count(distinct xrd_brand.brand_name) 
+    FROM xrd_goods INNER JOIN xrd_brand ON xrd_goods.brand_id = xrd_brand.brand_id 
+    WHERE xrd_brand.brand_id in( SELECT max(xrd_brand.brand_id) 
+    FROM xrd_brand xrd_goods 
+    WHERE xrd_goods.cat_id=$pid and xrd_brand.brand_id = xrd_goods.brand_id 
+    GROUP BY xrd_goods.brand_id ) GROUP BY xrd_brand.brand_name&quot;;
+</code></pre><p><strong>换行好像会稍微好看一点哈(｀・ω・´)</strong></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/donate/lirlsZFB.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/donate/lirlsWX.png"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/03/22/css3实现无缝图片滚动/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                css3实现无缝图片滚动</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/lirls.jpg" itemprop="image" alt="lirls" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">lirls</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
