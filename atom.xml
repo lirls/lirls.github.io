@@ -29,12 +29,12 @@
     
     </summary>
     
-      <category term="资源" scheme="https://lirls.com/categories/%E8%B5%84%E6%BA%90/"/>
+      <category term="资源" scheme="https://lirls.com/categories/Resources/"/>
     
     
       <category term="web" scheme="https://lirls.com/tags/web/"/>
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
@@ -51,12 +51,12 @@
     
     </summary>
     
-      <category term="技术" scheme="https://lirls.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://lirls.com/categories/Technology/"/>
     
     
       <category term="web" scheme="https://lirls.com/tags/web/"/>
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
@@ -73,12 +73,12 @@
     
     </summary>
     
-      <category term="技术" scheme="https://lirls.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://lirls.com/categories/Technology/"/>
     
     
       <category term="web" scheme="https://lirls.com/tags/web/"/>
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
@@ -95,12 +95,12 @@
     
     </summary>
     
-      <category term="技术" scheme="https://lirls.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://lirls.com/categories/Technology/"/>
     
     
       <category term="web" scheme="https://lirls.com/tags/web/"/>
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
@@ -109,7 +109,7 @@
     <link href="https://lirls.com/post/783b/"/>
     <id>https://lirls.com/post/783b/</id>
     <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-28T17:47:10.675Z</updated>
+    <updated>2020-03-28T18:04:02.521Z</updated>
     
     <summary type="html">
     
@@ -117,12 +117,12 @@
     
     </summary>
     
-      <category term="转载" scheme="https://lirls.com/categories/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="技术" scheme="https://lirls.com/categories/Technology/"/>
     
     
       <category term="web" scheme="https://lirls.com/tags/web/"/>
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
@@ -131,7 +131,7 @@
     <link href="https://lirls.com/post/39c1/"/>
     <id>https://lirls.com/post/39c1/</id>
     <published>2020-03-22T03:29:45.000Z</published>
-    <updated>2020-03-28T17:47:34.345Z</updated>
+    <updated>2020-03-28T18:11:41.320Z</updated>
     
     <summary type="html">
     
@@ -139,10 +139,10 @@
     
     </summary>
     
-      <category term="资源" scheme="https://lirls.com/categories/%E8%B5%84%E6%BA%90/"/>
+      <category term="随想" scheme="https://lirls.com/categories/Caprice/"/>
     
     
-      <category term="悦读" scheme="https://lirls.com/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
     
   </entry>
   
