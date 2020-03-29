@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lirls.com/"/>
-  <updated>2020-03-28T17:48:10.981Z</updated>
+  <updated>2020-03-29T05:05:21.516Z</updated>
   <id>https://lirls.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020谷歌邮箱注册方法</title>
+    <link href="https://lirls.com/post/c964/"/>
+    <id>https://lirls.com/post/c964/</id>
+    <published>2020-03-29T04:39:10.000Z</published>
+    <updated>2020-03-29T05:05:21.516Z</updated>
+    
+    <summary type="html">
+    
+      2020谷歌邮箱注册手机号无法用于验证
+    
+    </summary>
+    
+      <category term="资源" scheme="https://lirls.com/categories/Resources/"/>
+    
+    
+      <category term="web" scheme="https://lirls.com/tags/web/"/>
+    
+      <category term="悦读" scheme="https://lirls.com/tags/Reading/"/>
+    
+  </entry>
   
   <entry>
     <title>coding自定义域名被其他网站绑定</title>
@@ -39,15 +61,15 @@
   </entry>
   
   <entry>
-    <title>MySQL中DISTINCT不能选择多个字段的解决方法</title>
-    <link href="https://lirls.com/post/5927/"/>
-    <id>https://lirls.com/post/5927/</id>
+    <title>纽约比加州时间早3个小时</title>
+    <link href="https://lirls.com/post/783b/"/>
+    <id>https://lirls.com/post/783b/</id>
     <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-28T17:47:22.281Z</updated>
+    <updated>2020-03-28T18:04:02.521Z</updated>
     
     <summary type="html">
     
-      MySQL字段问题
+      纽约比加州时间早3个小时
     
     </summary>
     
@@ -105,15 +127,15 @@
   </entry>
   
   <entry>
-    <title>纽约比加州时间早3个小时</title>
-    <link href="https://lirls.com/post/783b/"/>
-    <id>https://lirls.com/post/783b/</id>
+    <title>MySQL中DISTINCT不能选择多个字段的解决方法</title>
+    <link href="https://lirls.com/post/5927/"/>
+    <id>https://lirls.com/post/5927/</id>
     <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-28T18:04:02.521Z</updated>
+    <updated>2020-03-28T17:47:22.281Z</updated>
     
     <summary type="html">
     
-      纽约比加州时间早3个小时
+      MySQL字段问题
     
     </summary>
     
