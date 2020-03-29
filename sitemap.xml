@@ -121,14 +121,7 @@
   </url>
   
   <url>
-    <loc>https://lirls.com/rss/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lirls.com/lab/index.html</loc>
+    <loc>https://lirls.com/tags/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -142,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://lirls.com/lab/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lirls.com/donate/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
@@ -149,7 +149,7 @@
   </url>
   
   <url>
-    <loc>https://lirls.com/tags/index.html</loc>
+    <loc>https://lirls.com/rss/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
