@@ -4,7 +4,7 @@
   <url>
     <loc>https://lirls.com/post/c964/</loc>
     
-    <lastmod>2020-03-29T05:05:21.516Z</lastmod>
+    <lastmod>2020-03-29T05:05:43.200Z</lastmod>
     
   </url>
   
@@ -121,20 +121,6 @@
   </url>
   
   <url>
-    <loc>https://lirls.com/lab/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lirls.com/comment/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://lirls.com/rss/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
@@ -149,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://lirls.com/donate/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lirls.com/video/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
@@ -156,7 +149,14 @@
   </url>
   
   <url>
-    <loc>https://lirls.com/donate/index.html</loc>
+    <loc>https://lirls.com/lab/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lirls.com/comment/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
