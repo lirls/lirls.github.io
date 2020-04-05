@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lirls.com/"/>
-  <updated>2020-03-29T05:05:43.200Z</updated>
+  <updated>2020-04-05T01:27:29.832Z</updated>
   <id>https://www.lirls.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>静态页面练习</title>
+    <link href="https://www.lirls.com/post/8122/"/>
+    <id>https://www.lirls.com/post/8122/</id>
+    <published>2020-04-05T01:17:55.000Z</published>
+    <updated>2020-04-05T01:27:29.832Z</updated>
+    
+    <summary type="html">
+    
+      静态页面练习
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lirls.com/categories/Technology/"/>
+    
+    
+      <category term="web" scheme="https://www.lirls.com/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>2020谷歌邮箱注册方法</title>
@@ -83,28 +103,6 @@
   </entry>
   
   <entry>
-    <title>css3实现无缝图片滚动</title>
-    <link href="https://www.lirls.com/post/85b1/"/>
-    <id>https://www.lirls.com/post/85b1/</id>
-    <published>2020-03-22T09:33:15.000Z</published>
-    <updated>2020-03-28T17:47:59.741Z</updated>
-    
-    <summary type="html">
-    
-      无缝图片滚动
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lirls.com/categories/Technology/"/>
-    
-    
-      <category term="web" scheme="https://www.lirls.com/tags/web/"/>
-    
-      <category term="悦读" scheme="https://www.lirls.com/tags/Reading/"/>
-    
-  </entry>
-  
-  <entry>
     <title>css幽灵空白节点</title>
     <link href="https://www.lirls.com/post/8d6a/"/>
     <id>https://www.lirls.com/post/8d6a/</id>
@@ -140,6 +138,28 @@
     </summary>
     
       <category term="转载" scheme="https://www.lirls.com/categories/Reprint/"/>
+    
+    
+      <category term="web" scheme="https://www.lirls.com/tags/web/"/>
+    
+      <category term="悦读" scheme="https://www.lirls.com/tags/Reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css3实现无缝图片滚动</title>
+    <link href="https://www.lirls.com/post/85b1/"/>
+    <id>https://www.lirls.com/post/85b1/</id>
+    <published>2020-03-22T09:33:15.000Z</published>
+    <updated>2020-03-28T17:47:59.741Z</updated>
+    
+    <summary type="html">
+    
+      无缝图片滚动
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lirls.com/categories/Technology/"/>
     
     
       <category term="web" scheme="https://www.lirls.com/tags/web/"/>

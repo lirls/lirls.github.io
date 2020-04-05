@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.lirls.com/post/8122/</loc>
+    
+    <lastmod>2020-04-05T01:27:29.832Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.lirls.com/post/783b/</loc>
     
     <lastmod>2020-03-29T06:06:52.249Z</lastmod>
@@ -121,6 +128,20 @@
   </url>
   
   <url>
+    <loc>https://www.lirls.com/donate/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.lirls.com/lab/index.html</loc>
+    
+    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.lirls.com/rss/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
@@ -135,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://www.lirls.com/lab/index.html</loc>
+    <loc>https://www.lirls.com/video/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
@@ -143,20 +164,6 @@
   
   <url>
     <loc>https://www.lirls.com/comment/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lirls.com/donate/index.html</loc>
-    
-    <lastmod>2020-03-16T10:41:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.lirls.com/video/index.html</loc>
     
     <lastmod>2020-03-16T10:41:30.000Z</lastmod>
     
