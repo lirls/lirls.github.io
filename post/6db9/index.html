@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">css3实现无缝图片滚动 | lirls-星芒万里,瞬时毫厘</title>
+  <title itemprop="name">html+css仿小米官网(静态页面) | lirls-星芒万里,瞬时毫厘</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -361,15 +361,15 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg);" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/lirls/cdn@1.5/img/articleimg/233527.jpg);" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.5/img/articleimg/233527.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      css3实现无缝图片滚动</h1>
+      html+css仿小米官网(静态页面)</h1>
       <p class="entry-census">
         <span>
           <a href="lirls.com">
-            <img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/lirls.jpg">
+            <img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.2/img/custom/lirls.jpg">
           </a>
         </span>
         <span>
@@ -377,7 +377,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-3-22<span class="bull">
+        2020-4-6<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -391,67 +391,693 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h3 id="使用css3中animation动画实现图片无缝滚动。"><a href="#使用css3中animation动画实现图片无缝滚动。" class="headerlink" title="使用css3中animation动画实现图片无缝滚动。"></a>使用css3中animation动画实现图片无缝滚动。</h3><a id="more"></a>
-<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="https://s2.ax1x.com/2019/06/25/ZZE461.gif" alt="效果图"></p>
-<p>​    其中首先所有图片的宽相加要等于盒子的宽，然后使用@keyframes  animation（动画名字），在from（开始位置ps:也可以用0%）和to（结束位置ps:也可以用100%）添加transform：translateX添加动画的开始和结束X轴坐标。用animation 动画片引用动画。infinite无线循环  linear匀速。更多css元素请参考<a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">W3C官方手册</a>。</p>
-<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>​            因为图片是和盒子一样宽，所以只要图片一移动后面肯定会漏出空白位置。即使动画快速回来还是会有这样的情况。所以我只需要在盒子后面在加上一组图片，这样最后一张走完了，下一排的第一张图片就会显示了；这样依次形成一个循环，超出的盒子部分的隐藏，搞定。如果理解不清楚，那么画一张图理解一下（大概是这样的QWQ）。</p>
-<p><img src="https://s2.ax1x.com/2019/06/25/ZZEbkD.png" alt="自画图"></p>
-<h2 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构:"></a>HTML结构:</h2><pre><code>&lt;nav&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;5.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;6.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;7.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;3.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;4.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;5.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;6.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;7.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;nav&gt;
-</code></pre><h2 id="CSS结构"><a href="#CSS结构" class="headerlink" title="CSS结构:"></a>CSS结构:</h2><pre><code>*{
-      margin:0;
-      padding: 0;
-     }
-      li{
-      list-style: none;
-      }
-      nav{
-        width: 1050px;
-        height: 100px;
-        border: 1px solid palevioletred;
-        margin: 300px auto;
-        overflow: hidden;
-       }
-     nav li img{
-         width: 150px;
-         height: 100px;
-         }
-      nav li{
-          loat: left;
-          }
-      nav ul{
-           width: 200%;
-           animation: moveing 3s linear infinite;
-             transition: all 2s;
-            }
-      @keyframes moveing{
-            from{
-             transform: translateX(0);
-             }
-         to{
-             transform: translateX(-1050px);
-            }
-       }
-         nav ul:hover{
-       animation-play-state:paused;
+          <h2 id="html-css仿小米官网-静态页面"><a href="#html-css仿小米官网-静态页面" class="headerlink" title="html+css仿小米官网(静态页面)"></a>html+css仿小米官网(静态页面)</h2><!-- move-->
+<h3 id="关于全站变灰的样式-一行代码实现"><a href="#关于全站变灰的样式-一行代码实现" class="headerlink" title="关于全站变灰的样式(一行代码实现)"></a>关于全站变灰的样式(一行代码实现)</h3><pre><code class="css">html {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
 }
 </code></pre>
+<h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h2><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;
+    &lt;title&gt;小米官网&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- top部分 --&gt;
+    &lt;div class=&quot;top&quot;&gt;
+        &lt;div class=&quot;w1226&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;小米网&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;MIUI&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;米聊&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;游戏&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;多看阅读&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;云服务&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;小米网移动版&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;问题反馈&lt;/a&gt;
+                    &lt;span&gt;|&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Select Region&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- header部分 --&gt;
+    &lt;div class=&quot;header&quot;&gt;
+        &lt;div class=&quot;h-nav w1226 clearfix&quot;&gt;
+            &lt;div class=&quot;mi-logo&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;r-logo&quot;&gt;&lt;/div&gt;
+            &lt;ul class=&quot;clearfix&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;小米手机&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;红米&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;平板&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;电视&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;盒子 · 影音&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;路由器&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;智能硬件&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;服务&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;社区&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- banner部分 --&gt;
+    &lt;div class=&quot;banner&quot;&gt;
+        &lt;div class=&quot;w1226 clearfix&quot;&gt;
+            &lt;div class=&quot;banner-nav fl&quot;&gt;
+                 &lt;ul&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;手机 平板 电话卡&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;电视 盒子&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;路由器 智能硬件&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;移动电源 插线板&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;耳机 音箱&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;电池 存储卡&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;保护套 后盖&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;贴膜 其他配件&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;米兔 服装&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;箱包 其他周边&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;banner-l fr&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- product部分 --&gt;
+    &lt;div class=&quot;product w1226 clearfix&quot;&gt;
+        &lt;div class=&quot;pro-block&quot;&gt;
+            &lt;p class=&quot;p1&quot;&gt;我就是一个空色块&lt;/p&gt;
+            &lt;p class=&quot;p2&quot;&gt;一言不合就这么任性&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pro-list&quot;&gt;
+            &lt;img src=&quot;./images/big/pro1.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+         &lt;div class=&quot;pro-list&quot;&gt;
+             &lt;img src=&quot;./images/big/pro2.jpg&quot; alt=&quot;&quot;&gt;
+         &lt;/div&gt;
+          &lt;div class=&quot;pro-list3&quot;&gt;
+              &lt;img src=&quot;./images/big/pro3.jpg&quot; alt=&quot;&quot;&gt;
+          &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- main 部分 --&gt;
+    &lt;div class=&quot;main&quot;&gt;
+        &lt;div class=&quot;w1226&quot;&gt;
+            &lt;div class=&quot;main-t&quot;&gt;
+                &lt;h2 class=&quot;title&quot;&gt;智能硬件&lt;/h2&gt;
+                &lt;a href=&quot;#&quot;&gt;查看全部&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;main-b clearfix&quot;&gt;
+                &lt;div class=&quot;main-l fl&quot;&gt;
+                    &lt;img src=&quot;./images/girl.jpg&quot; alt=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;main-r fl&quot;&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;free&quot;&gt;免邮费&lt;/div&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d1.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;小米路由器3&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;四天线设计，更安全更稳定&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;149元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d2.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;米家 LED 智能台灯&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;无可视频闪，亮度色温无级调节&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;169元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;free&quot;&gt;免邮费&lt;/div&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d3.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;小米净水器 厨下式&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;RO反渗透直出纯净水，包邮包安装&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;1999元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;no&quot;&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d4.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;小蚁智能摄像机 夜视版&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;能看能听能说，手机远程观看&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;149元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d5.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;Yeelight床头灯&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;触摸式操作，给卧室1600万种颜色&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;249元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d6.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;小米空气净化器2&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;智能警戒，为您的家增添一份安心定&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;699元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;discount&quot;&gt;享9折&lt;/div&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d7.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;小米智能安防套装&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;智能警戒，为您的家增添一份安心&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;169元
+                                    &lt;del&gt;188元&lt;/del&gt;
+                                &lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;no&quot;&gt;
+                            &lt;a href=&quot;#&quot;&gt;
+                                &lt;div class=&quot;main-img&quot;&gt;
+                                    &lt;img src=&quot;./images/d8.jpg&quot; alt=&quot;&quot; width=&quot;160px&quot; height=&quot;160px&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;h3 class=&quot;title&quot;&gt;米家iHealth血压计&lt;/h3&gt;
+                                &lt;p class=&quot;desc&quot;&gt;爸妈上手就会用的智能血压计&lt;/p&gt;
+                                &lt;p class=&quot;price&quot;&gt;399元&lt;/p&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- link部分 --&gt;
+    &lt;div class=&quot;link w1226&quot;&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;帮助中心&lt;/dt&gt;
+            &lt;dd&gt;账户管理&lt;/dd&gt;
+            &lt;dd&gt;购物指南&lt;/dd&gt;
+            &lt;dd&gt;订单操作&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;服务支持&lt;/dt&gt;
+            &lt;dd&gt;售后政策&lt;/dd&gt;
+            &lt;dd&gt;自助服务&lt;/dd&gt;
+            &lt;dd&gt;相关下载&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;线下门店&lt;/dt&gt;
+            &lt;dd&gt;小米之家&lt;/dd&gt;
+            &lt;dd&gt;服务网点&lt;/dd&gt;
+            &lt;dd&gt;零售网点&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;关于小米&lt;/dt&gt;
+            &lt;dd&gt;了解小米&lt;/dd&gt;
+            &lt;dd&gt;加入小米&lt;/dd&gt;
+            &lt;dd&gt;联系我们&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;关注我们&lt;/dt&gt;
+            &lt;dd&gt;新浪微博&lt;/dd&gt;
+            &lt;dd&gt;小米部落&lt;/dd&gt;
+            &lt;dd&gt;官方微信&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;特色服务&lt;/dt&gt;
+            &lt;dd&gt;F 码通道&lt;/dd&gt;
+            &lt;dd&gt;小米移动&lt;/dd&gt;
+            &lt;dd&gt;防伪查询&lt;/dd&gt;
+        &lt;/dl&gt;
+        &lt;div class=&quot;l-contact&quot;&gt;
+            &lt;p class=&quot;tel&quot;&gt;400-100-5678&lt;/p&gt;
+            &lt;p class=&quot;time&quot;&gt;周一至周日 8:00-18:00&lt;/p&gt;
+            &lt;p class=&quot;ctpl&quot;&gt;（仅收市话费）&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- font部分 --&gt;
+    &lt;div class=&quot;foot&quot;&gt;
+        &lt;div class=&quot;w1226&quot;&gt;
+            &lt;div class=&quot;foot-l&quot;&gt;&lt;/div&gt;
+            &lt;p class=&quot;f-title&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;小米网&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;MIUI&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;米聊&lt;/a&gt;
+                &lt;span&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;多看书城&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;小米路由器&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;视频电话&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;小米后院&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;小米天猫店&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;小米淘宝直营店&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;小米网盟&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;问题反馈&lt;/a&gt;
+                &lt;span class=&quot;sep&quot;&gt;|&lt;/span&gt;
+                &lt;a href=&quot;#&quot;&gt;Select Region&lt;/a&gt;
+            &lt;/p&gt;
+            &lt;p class=&quot;f-declare&quot;&gt;&amp;copy;mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号&lt;/p&gt;
+            &lt;p class=&quot;f-declare&quot;&gt;违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试&lt;/p&gt;
+        &lt;div class=&quot;f-logo&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h2><pre><code class="css">/* -----------------------------------    css初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: &#39;&#39;;
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    /* 兼容ie6-7 */
+    *zoom: 1;
+}
+/* 版心 */
+.w1226 {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* 一行代码实现全站变灰 */
+/* html {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
+} */
+/* ---------------------------------------  top部分 */
+.top {
+    height: 40px;
+    background-color: #333333;
+}
+
+.top ul li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.top ul li a {
+    color: #B0B0B0;
+    font-size: 12px;
+}
+.top ul li a:hover {
+    color: #ffffff;
+}
+.top ul li span {
+    color: #424242;
+    margin: 0 7px;
+}
+
+/* ----------------------------------------  header部分 */
+.header .h-nav {
+    padding-top: 22px;
+    padding-left: 1px;
+    padding: 22px 0 12px 1px;
+}
+.h-nav .mi-logo {
+    width: 55px;
+    height: 55px;
+    background: url(./images/logo.png) no-repeat;
+    float: left;
+    margin-right: 30px;
+}
+.h-nav .r-logo {
+    width: 163px;
+    height: 66px;
+    background: url(./images/new.gif) no-repeat;
+    float: left;
+}
+.h-nav ul li {
+    height: 66px;
+    line-height: 66px;
+    float: left;
+    padding-right: 26px;
+}
+.h-nav ul li a {
+    font-size: 14px;
+    color: #333333;
+}
+.h-nav ul li a:hover {
+    color: #FF6700;
+}
+
+/* ----------------------------------------  banner部分 */
+.banner .banner-nav {
+    width: 235px;
+    height: 460px;
+    background: #2C505F;
+}
+
+.banner .banner-nav ul {
+    padding-top: 20px;
+}
+
+.banner .banner-nav ul li {
+    height: 42px;
+    line-height: 42px;
+    background: url(./images/right.png) no-repeat 202px center;
+    padding-left: 30px;
+    padding-right: 24px;
+}
+.banner .banner-nav ul li a {
+    color: #eff2f3;
+    font-size: 12px;
+}
+.banner .banner-nav ul li:hover {
+    background: #FF6700 url(./images/right.png) no-repeat 202px center;
+}
+
+.banner .banner-l {
+    width: 991px;
+    height: 460px;
+    background: url(./images/banner.png) no-repeat;
+}
+
+/* ------------------------------------  product部分 */
+.product {
+    box-sizing: border-box;
+    margin-top: 14px;
+    margin-bottom: 66px;
+}
+.product .pro-block {
+    width: 234px;
+    height: 170px;
+    background: #5f5750;
+    padding-top: 45px;
+    box-sizing: border-box;
+    /* text-indent: 37px; */
+    text-align: right;
+    float: left;
+    margin-right: 14px;
+}
+.product .pro-block .p1 {
+    line-height: 38px;
+    font-size: 16px;
+    color: #fff;
+    padding-right: 54px;
+}
+.product .pro-block .p2 {
+    line-height: 38px;
+    font-size: 16px;
+    color: #fff;
+    padding-right: 54px;
+}
+
+.product .pro-list {
+    float: left;
+    margin-right: 15px;
+    height: 170px;
+}
+
+.product .pro-list img,
+.product .pro-list3 img {
+    width: 316px;
+    height: 170px;
+}
+.product .pro-list3{
+    float: right;
+    height: 170px;
+}
+
+/* ---------------------------------------   main部分 */
+.main {
+    height: 798px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.main .main-t {
+    height: 39px;
+    /* margin-top: 79px; */
+    padding-top: 79px;
+}
+.main .main-t .title {
+    float: left;
+    font-size: 22px;
+    font-weight: normal;
+    color: #333333;
+}
+.main .main-t a {
+    display: block;
+    float: right;
+    padding-right: 29px;
+    margin-top: 2px;
+    font-size: 16px;
+    color: #424242;
+}
+.main .main-t a:hover {
+    color: #FF6700;
+}
+
+.main .main-b .main-l{
+    margin-right: 14px;
+}
+.main .main-b .main-l:hover {
+    box-shadow: 10px 10px 5px rgba(0,0,0,.2);
+    transform: translate3d(0, -1px, 5px);
+    transition: all .2s linear
+}
+.main .main-b .main-r li:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .2);
+    transform: translate3d(0, -1px, 5px);
+    /* transition: all .1s linear */
+}
+.main .main-b .main-r {
+    width: 978px;
+    height: 614px;
+}
+.main .main-b .main-r ul li {
+    width: 234px;
+    height: 300px;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    background: #ffffff;
+}
+.main .main-b .main-r ul .no {
+    margin-right: 0;
+}
+.main .main-b .main-r ul li a {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.main .main-b .main-r ul li a .free{
+    width: 64px;
+    height: 20px;
+    color: #fff;
+    background: #ffac13;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+.main .main-b .main-r ul li a .discount {
+    width: 64px;
+    height: 20px;
+    color: #fff;
+    background: #e53935;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+.main .main-b .main-r ul li a .main-img {
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    margin: 0 auto 17px;
+}
+.main .main-b .main-r ul li a .title {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 22px;
+}
+.main .main-b .main-r ul li a .desc {
+    font-size: 12px;
+    color: #b0b0b0;
+    line-height: 22px;
+}
+.main .main-b .main-r ul li a .price {
+    font-size: 14px;
+    color: #ff6700;
+    line-height: 36px;
+}
+.main .main-b .main-r ul li a .price del {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------  link部分 */
+.link {
+    height: 211px;
+    padding-top: 59px;
+    box-sizing: border-box;
+}
+.link dl {
+    float: left;
+    width: 161px;
+    font-size: 12px;
+}
+.link dl dt {
+    height: 36px;
+    color: #424242;
+}
+.link dl dd {
+    line-height: 28px;
+    color: #757575;
+}
+.link .l-contact {
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #ececec;
+    float: right;
+    text-align: center;
+}
+.link .l-contact .tel {
+    font-size: 22px;
+    color: #ff6700;
+    line-height: 27px;
+}
+.link .l-contact .time,
+.link .l-contact .ctpl {
+    color: #616161;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* ---------------------------------------------   foot部分 */
+.foot {
+    height: 157px;
+    background: #fafafa;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.foot .foot-l {
+    width: 55px;
+    height: 55px;
+    background: url(./images/logo.png) no-repeat;
+    float: left;
+    margin-right: 11px;
+}
+.foot .f-title {
+    font-size: 12px;
+    line-height: 18px;
+}
+.foot .f-title a {
+    color: #757575;
+}
+.foot .f-title a:hover {
+    color: #ff6700;
+}
+.foot .f-title .sep {
+    margin: 0 2px;
+}
+.foot .f-declare {
+    font-size: 12px;
+    color: #b0b0b0;
+    line-height: 18px;
+}
+
+.foot .f-logo {
+    width: 100%;
+    height: 19px;
+    background: url(./images/bottom.png) no-repeat center 0;
+    margin-top: 30px;
+}
+
+
+</code></pre>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -479,36 +1105,19 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/post/5927/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.2/img/startdash/lirls.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.2/img/startdash/lirls.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                MySQL中DISTINCT不能选择多个字段的解决方法</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/post/8d6a/" rel="next">
+            <a href="/post/8122/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/startdash/lirls.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.5/img/articleimg/230543.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.5/img/articleimg/230543.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                css幽灵空白节点</h3>
+                静态页面练习</h3>
                 <hr>
               </div>
             </a>
@@ -532,7 +1141,7 @@
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="lirls.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.1/img/custom/lirls.jpg" itemprop="image" alt="lirls" height="70" width="70"></a>
+          <a href="lirls.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/lirls/cdn@1.2/img/custom/lirls.jpg" itemprop="image" alt="lirls" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
